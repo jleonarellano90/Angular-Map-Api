@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Deleting Markers</title>
+    <style>
+        html, body, #map-canvas {
+            height: 400px;
+            width: 400px;
+        }
+
+        #panel {
+            position: absolute;
+            top: 10px;
+            left: 23px;
+            z-index: 5;
+            background-color: #333;
+            padding: 5px;
+            border: 1px solid #AAA;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="panel">
+        <input onclick="clearMarkers();" type=button value="Hide Markers">
+        <input onclick="showMarkers();" type=button value="Show All Markers">
+        <input onclick="deleteMarkers();" type=button value="Delete Markers">
+    </div>
+    <div id="map-canvas"></div>
+    <p>Click over the map to add markers.</p>
+
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="deleting.js"></script>
+</body>
+</html>
+

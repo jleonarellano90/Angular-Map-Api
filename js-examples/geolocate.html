@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title> Geolocate </title>
+    <style>
+      html, body, #googleMap {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -250px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="panel">
+      <input id="address" type="text" value="USAA, San Antonio, Texas" size="60" onchange="codeAddress()"><br>
+	  <input id="txt_latlng" name="txt_latlng" type="text" value="29.5344204, -98.57464870000001" size="60"><br>
+	  <center>
+	  <input type="button" value="Add" onclick="codeAddress()" >
+	  <input type="button" value="Confirm" onclick="confirmMarker()">
+	  <input type="button" value="Delete" onclick="deleteMarker()" >
+	  <input type="button" value="Show" onclick="showMarker()" >
+	  </center>
+    </div>
+    <div id="googleMap"></div>
+
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="geolocate.js"></script>
+  </body>
+</html>
+

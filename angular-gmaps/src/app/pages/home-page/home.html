@@ -1,0 +1,10 @@
+<div layout="column" layout-align="center center" layout-wrap>
+    <div flex="100">
+        <div id="map_canvas">
+            <ui-gmap-google-map center="$ctrl.map.center" zoom="$ctrl.map.zoom">
+                <ui-gmap-marker idkey="$ctrl.marker.id" coords="$ctrl.marker.coords" options="$ctrl.marker.options" events="$ctrl.marker.events">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </div>
+</div>

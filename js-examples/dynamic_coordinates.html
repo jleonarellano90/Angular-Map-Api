@@ -1,0 +1,24 @@
+<!--dynamicc_map.htm file-->
+<html>
+	<head>
+		<title> Dynamic Coordinates </title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+	</head>
+	<body onload="initialize();">
+		Latitude, longitude <input id="txt_latlng" name="txt_latlng" type="text" value="29.5348829, -98.5758339" style="width:480px;">
+		<div id="googleMap" style="width:600px;height:400px;border:solid black 1px;"></div>
+
+        <!-- Scripts -->
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="dynamic_coordinates.js"></script>
+		<script>
+            $(document).ready(function() {
+                setInterval(function() {
+                    $('#googleMap').this("refresh")
+                }, 1000);
+            });
+		</script>
+	</body>
+</html>
