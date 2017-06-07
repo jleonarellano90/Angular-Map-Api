@@ -1,1 +1,1 @@
-# Angular-Map-Api
+# Angular-Maps-Api
