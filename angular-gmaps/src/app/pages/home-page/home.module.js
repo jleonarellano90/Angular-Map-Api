@@ -5,6 +5,7 @@ import angular from 'angular';
 import HomeController from './home.controller';
 import HomeComponent from './home.component';
 import mapsServiceModule from '../../services/mapsService.module';
+require('../../../res/styles/home.css');
 
 export default angular.module('home', [
     mapsServiceModule.name

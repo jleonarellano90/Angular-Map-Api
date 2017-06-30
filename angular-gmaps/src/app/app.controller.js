@@ -1,7 +1,7 @@
 /**
  * Created by plq1966 on 5/08/2017.
  */
-export default class AppController {
+export default class appController {
     constructor($scope, $mdSidenav) {
         this.$scope = $scope;
         this.$mdSidenav = $mdSidenav;
@@ -16,4 +16,4 @@ export default class AppController {
     }
 }
 
-AppController.$inject = ['$scope', '$mdSidenav'];
+appController.$inject = ['$scope', '$mdSidenav'];

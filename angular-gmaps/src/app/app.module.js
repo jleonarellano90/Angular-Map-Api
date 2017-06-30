@@ -3,7 +3,6 @@
  */
 // CSS Styles
 import 'bootstrap/dist/css/bootstrap.css';
-import 'angular-ui-grid/ui-grid.css';
 import 'angular-material/angular-material.css';
 import 'babel-polyfill';
 
@@ -20,20 +19,20 @@ import sideNav from './pages/sidenav/sideNav.module';
 import home from './pages/home-page/home.module';
 
 // Controllers
-import AppController from './app.controller.js';
+import appController from './app.controller.js';
 
 // Configs
-import AppConfig from './app.config';
+import appConfig from './app.config';
 
 // Create our demo module
 export default angular.module('AngularMapsApi', [
     angularAnimate,
-    'nemLogging',
-    'uiGmapgoogle-maps',
     angularMaterial,
     angularUIRouter,
+    'nemLogging',
+    'uiGmapgoogle-maps',
     sideNav.name,
     home.name
 ])
-.controller('AppController', AppController)
-.config(AppConfig);
+.controller('appController', appController)
+.config(appConfig);

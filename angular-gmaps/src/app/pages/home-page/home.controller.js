@@ -5,11 +5,9 @@ export default class HomeController {
     /**
      * Constructor class HomeController
      * @param $scope
-     * @param mapsService
      */
-    constructor($scope, mapsService) {
+    constructor($scope) {
         this.$scope = $scope;
-        this.mapsService = mapsService;
         this.map = {
             center: {
                 latitude: 29.5344204,
@@ -31,21 +29,13 @@ export default class HomeController {
                 dragend: function (marker, eventName, args) {
                     console.log('Marker dragend:');
                     var lat = marker.getPosition().lat();
-                    var lon = marker.getPosition().lng();
+                    var lng = marker.getPosition().lng();
                     console.log(lat);
-                    console.log(lon);
-
-                    this.marker.options = {
-                        draggable: true,
-                        labelContent: "lat: " + $scope.marker.coords.latitude + ' ' + 'lon: ' + $scope.marker.coords.longitude,
-                        labelAnchor: "100 0",
-                        labelClass: "marker-labels"
-                    };
+                    console.log(lng);
                 }
             }
         };
     }
 
 }
-
-HomeController.$inject = ['$scope', 'mapsService'];
+HomeController.$inject = ['$scope'];

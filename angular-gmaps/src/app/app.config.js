@@ -1,14 +1,6 @@
 export default function appConfiguration($stateProvider, $mdIconProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
     // states
     $stateProvider
-        .state('public', {
-            url: "/public",
-            views: {
-                'sideNav': {
-                    template: '<sh-side-nav></sh-side-nav>'
-                }
-            }
-        })
         .state('home', {
             url: '/home',
             title: 'Home',
@@ -19,15 +11,15 @@ export default function appConfiguration($stateProvider, $mdIconProvider, $urlRo
             title: 'Authorized',
             template: '<sh-authorized></sh-authorized>'
         });
-
     // default
     $urlRouterProvider.otherwise("/home");
+
     // material design icon stuff
     $mdIconProvider.icon('menu-hamburger', require('../res/icons/menu.svg'));
     // Google Maps config
     uiGmapGoogleMapApiProvider.configure({
-        key: '',
-        libraries: 'weather, geometry, visualization, drawing'
+        key: 'AIzaSyB7wXxMqwtN7GeM03rpZJHC7Uj7zB-c4N0',
+        libraries: 'places, geometry, visualization, drawing'
     });
 }
 
